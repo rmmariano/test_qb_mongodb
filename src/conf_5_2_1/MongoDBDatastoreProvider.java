@@ -5,16 +5,13 @@ import java.net.UnknownHostException;
 import org.esfinge.querybuilder.annotation.ServicePriority;
 import org.esfinge.querybuilder.mongodb.DatastoreProvider;
 
-import com.google.code.morphia.AdvancedDatastore;
 import com.google.code.morphia.Datastore;
 import com.mongodb.Mongo;
 import com.mongodb.MongoException;
 
 @ServicePriority(1)
 public class MongoDBDatastoreProvider extends DatastoreProvider{
-	
-//	Mongo mongo;
-	
+		
 	public MongoDBDatastoreProvider() {
 		try{
 			mongo = new Mongo("localhost", 27017);
@@ -25,7 +22,7 @@ public class MongoDBDatastoreProvider extends DatastoreProvider{
 		}
 		
 		getMorphia().map(Cliente.class);
-//		getMorphia().map(Cachorro.class);
+		getMorphia().map(Cachorro.class);
 //		getMorphia().map(Pagamento.class);
 	}
 
@@ -33,11 +30,5 @@ public class MongoDBDatastoreProvider extends DatastoreProvider{
 	public Datastore getDatastore() {
 		return getMorphia().createDatastore(mongo, "testdb");
 	}
-
-//	@Override
-//	public AdvancedDatastore getAdvancedDatastore() {
-//		// TODO Auto-generated method stub
-//		return null;
-//	}
 
 }

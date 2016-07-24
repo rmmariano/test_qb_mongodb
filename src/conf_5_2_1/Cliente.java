@@ -16,8 +16,8 @@ public class Cliente {
 	private int id;
 	private String nome;
 	
-//	@Reference
-//	public Set<Cachorro> cachorros = new HashSet<Cachorro>();
+	@Reference
+	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
 //	@Reference
 //	public Set<Pagamento> pagamentos = new HashSet<Pagamento>();
 	
@@ -66,10 +66,9 @@ public class Cliente {
 //	}
 
 
-//
-//	public void addCachorro(Cachorro cachorro) {
-//		cachorros.add(cachorro);
-//	}
+	public void addCachorro(Cachorro cachorro) {
+		cachorros.add(cachorro);
+	}
 //	
 //	public void addPagamento(Pagamento pagamento) {
 //		pagamentos.add(pagamento);
@@ -94,13 +93,13 @@ public class Cliente {
 		this.nome = nome;
 	}
 
-//	public Set<Cachorro> getCachorros() {
-//		return cachorros;
-//	}
-//
-//	public void setCachorros(Set<Cachorro> cachorros) {
-//		this.cachorros = cachorros;
-//	}
+	public Set<Cachorro> getCachorros() {
+		return cachorros;
+	}
+
+	public void setCachorros(Set<Cachorro> cachorros) {
+		this.cachorros = cachorros;
+	}
 //
 //	public Set<Pagamento> getPagamentos() {
 //		return pagamentos;

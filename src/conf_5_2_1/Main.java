@@ -15,20 +15,19 @@ public class Main {
 		MongoDBDatastoreProvider db = new MongoDBDatastoreProvider();		
 		Datastore ds = db.getDatastore();
 		
-		Cliente cliente = new Cliente();
-		cliente.setId(0); cliente.setNome("Maril");		
-		Cliente cliente02 = new Cliente();
-		cliente02.setId(1); cliente02.setNome("Abys");
-		Cliente cliente03 = new Cliente();
-		cliente03.setId(2); cliente03.setNome("Maril");	
+		Cliente cliente = new Cliente(); cliente.setId(0); cliente.setNome("Maril");		
+		
+		Cliente cliente02 = new Cliente(); cliente02.setId(1); cliente02.setNome("Abys");
+		
+		Cliente cliente03 = new Cliente(); cliente03.setId(2); cliente03.setNome("Maril");	
 		
 //		Cachorro cachorro = new Cachorro();
-//		cachorro.id = 0; cachorro.nome = "Hau"; cachorro.raca = "pastor";
+//		cachorro.setId(0); cachorro.setNome("Hau"); cachorro.setRaca("pastor");
 //		
 //		Pagamento pagamento = new Pagamento();
 //		pagamento.id = 0; pagamento.valor = 300.00f; pagamento.data = "30/06/2016";
 		
-//		cliente.cachorros.add(cachorro);
+//		cliente.addCachorro(cachorro);
 //		cliente.pagamentos.add(pagamento);
 		
 		ds.save(cliente);
