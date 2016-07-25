@@ -1,8 +1,6 @@
 package conf_5_2_1;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import com.google.code.morphia.annotations.Entity;
@@ -20,16 +18,16 @@ public class Cliente {
 	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
 	
 //	@Reference
-//	public Set<Pagamento> pagamentos = new HashSet<Pagamento>();
+	private Set<Pagamento> pagamentos = new HashSet<Pagamento>();
 	
 
 	public void addCachorro(Cachorro cachorro) {
 		cachorros.add(cachorro);
 	}
-//	
-//	public void addPagamento(Pagamento pagamento) {
-//		pagamentos.add(pagamento);
-//	}
+	
+	public void addPagamento(Pagamento pagamento) {
+		pagamentos.add(pagamento);
+	}
 	
 	
 	// Getters and setters
@@ -56,13 +54,13 @@ public class Cliente {
 	public void setCachorros(Set<Cachorro> cachorros) {
 		this.cachorros = cachorros;
 	}
-//
-//	public Set<Pagamento> getPagamentos() {
-//		return pagamentos;
-//	}
-//
-//	public void setPagamentos(Set<Pagamento> pagamentos) {
-//		this.pagamentos = pagamentos;
-//	}
+
+	public Set<Pagamento> getPagamentos() {
+		return pagamentos;
+	}
+
+	public void setPagamentos(Set<Pagamento> pagamentos) {
+		this.pagamentos = pagamentos;
+	}
 
 }

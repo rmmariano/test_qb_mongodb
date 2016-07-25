@@ -23,14 +23,15 @@ public class Main {
 		
 		Cachorro cachorro = new Cachorro();
 		cachorro.setId(0); cachorro.setNome("Hau"); cachorro.setRaca("pastor");
-//		
-//		Pagamento pagamento = new Pagamento();
-//		pagamento.id = 0; pagamento.valor = 300.00f; pagamento.data = "30/06/2016";
+
+		Pagamento pagamento = new Pagamento();
+		pagamento.setId(0); pagamento.setValor(300.00f); pagamento.setData("30/06/2016");
 		
 		cliente.addCachorro(cachorro);
-//		cliente.pagamentos.add(pagamento);
+		cliente.addPagamento(pagamento);
 		
 		ds.save(cliente); ds.save(cliente02); ds.save(cliente03);		
+		
 		
 		System.out.println("Consulta usando Repository: ");
 		
@@ -47,15 +48,15 @@ public class Main {
 				System.out.println(" Nome: " + dog.getNome());				
 				System.out.println(" Raca: " + dog.getRaca());
 			}
-//			
-//			System.out.println("Pagamentos: ");			
-//			Set<Pagamento> set_pags = c.pagamentos;			
-//			for(Pagamento pag: set_pags){
-//				System.out.println(" ID: " + pag.id);				
-//				System.out.println(" Valor: " + pag.valor);
-//				System.out.println(" Data: " + pag.data);
-//			}
-//			
+			
+			System.out.println("Pagamentos: ");			
+			Set<Pagamento> set_pags = c.getPagamentos();			
+			for(Pagamento pag: set_pags){
+				System.out.println(" ID: " + pag.getId());				
+				System.out.println(" Valor: " + pag.getValor());
+				System.out.println(" Data: " + pag.getData());
+			}
+			
 			System.out.println("\n");			
 		}
 		
@@ -78,13 +79,13 @@ public class Main {
 				System.out.println(" Raca: " + dog.getRaca());
 			}
 
-//			System.out.println("Pagamentos: ");			
-//			Set<Pagamento> set_pags = c.pagamentos;			
-//			for(Pagamento pag: set_pags){
-//				System.out.println(" ID: " + pag.id);				
-//				System.out.println(" Valor: " + pag.valor);
-//				System.out.println(" Data: " + pag.data);
-//			}
+			System.out.println("Pagamentos: ");			
+			Set<Pagamento> set_pags = c.getPagamentos();			
+			for(Pagamento pag: set_pags){
+				System.out.println(" ID: " + pag.getId());				
+				System.out.println(" Valor: " + pag.getValor());
+				System.out.println(" Data: " + pag.getData());
+			}
 			
 			System.out.println("\n");			
 		}
@@ -103,14 +104,14 @@ public class Main {
 				System.out.println(" Nome: " + dog.getNome());				
 				System.out.println(" Raca: " + dog.getRaca());
 			}
-//			
-//			System.out.println("Pagamentos: ");			
-//			Set<Pagamento> set_pags = c.pagamentos;			
-//			for(Pagamento pag: set_pags){
-//				System.out.println(" ID: " + pag.id);				
-//				System.out.println(" Valor: " + pag.valor);
-//				System.out.println(" Data: " + pag.data);
-//			}
+			
+			System.out.println("Pagamentos: ");			
+			Set<Pagamento> set_pags = c.getPagamentos();			
+			for(Pagamento pag: set_pags){
+				System.out.println(" ID: " + pag.getId());				
+				System.out.println(" Valor: " + pag.getValor());
+				System.out.println(" Data: " + pag.getData());
+			}
 			
 			System.out.println("\n");			
 		}
