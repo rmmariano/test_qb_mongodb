@@ -30,9 +30,7 @@ public class Main {
 		cliente.addCachorro(cachorro);
 //		cliente.pagamentos.add(pagamento);
 		
-		ds.save(cliente);
-		ds.save(cliente02);
-		ds.save(cliente03);		
+		ds.save(cliente); ds.save(cliente02); ds.save(cliente03);		
 		
 		System.out.println("Consulta usando Repository: ");
 		
@@ -58,8 +56,9 @@ public class Main {
 //				System.out.println(" Data: " + pag.data);
 //			}
 //			
-//			System.out.println("\n");			
+			System.out.println("\n");			
 		}
+		
 		
 		System.out.println("\n*************\nConsultas pelo Query Builder: \n");
 		
@@ -89,6 +88,7 @@ public class Main {
 			
 			System.out.println("\n");			
 		}
+		
 		
 		System.out.println("Consultar pelo nome do cliente (Maril): ");
 		lista_de_clientes = dao.getClienteByNome("Maril");

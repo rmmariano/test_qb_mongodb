@@ -19,55 +19,9 @@ public class Cliente {
 //	@Reference
 	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
 	
-	
-	
 //	@Reference
 //	public Set<Pagamento> pagamentos = new HashSet<Pagamento>();
 	
-	
-//	@Reference
-//	private Set<Cachorro> cachorros;
-//	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
-//	public Set<Cachorro> cachorros = new HashSet<Cachorro>();
-//	public List<Cachorro> cachorros = new ArrayList<Cachorro>();
-	
-//	@Reference
-//	private Set<Pagamento> pagamentos;
-//	private Set<Pagamento> pagamentos = new HashSet<Pagamento>();
-//	public Set<Pagamento> pagamentos = new HashSet<Pagamento>();
-//	public List<Pagamento> pagamentos = new ArrayList<Pagamento>();
-	
-//	public Cliente() {
-//	}
-	
-//	public Cliente(int matricula, String nome, Set<Cachorro> cachorros, Set<Pagamento> pagamentos) {
-//		this.matricula = matricula;
-//		this.nome = nome;
-//		
-//		if(cachorros == null)
-//			this.cachorros = new HashSet<Cachorro>();			
-//		else
-//			this.cachorros = cachorros;
-//		
-//		if(pagamentos == null)
-//			this.pagamentos = new HashSet<Pagamento>();			
-//		else
-//			this.pagamentos = pagamentos;
-//	}
-	
-//	public Cliente(int matricula, String nome) {
-//		this.matricula = matricula;
-//		this.nome = nome;
-//	}
-	
-	
-//	public Cliente(int matricula, String nome, Set<Cachorro> cachorros, Set<Pagamento> pagamentos) {
-//		this.matricula = matricula;
-//		this.nome = nome;
-//		this.cachorros = cachorros;
-//		this.pagamentos = pagamentos;
-//	}
-
 
 	public void addCachorro(Cachorro cachorro) {
 		cachorros.add(cachorro);
@@ -79,7 +33,6 @@ public class Cliente {
 	
 	
 	// Getters and setters
-
 	public int getId() {
 		return id;
 	}

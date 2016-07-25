@@ -12,17 +12,7 @@ public class Cachorro {
 	private String raca;
 	
 	
-//	public Cachorro() {
-//	}	
-//	
-//	public Cachorro(String nome, String raca) {
-//		this.nome = nome;
-//		this.raca = raca;
-//	}
-//	
-//	
 //	//Getters and setters
-
 	public int getId() {
 		return id;
 	}
