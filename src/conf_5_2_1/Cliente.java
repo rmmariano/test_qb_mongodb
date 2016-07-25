@@ -13,8 +13,9 @@ public class Cliente {
 	@Id
 	private int id;
 	private String nome;
+	private Integer idade;
 	
-//	@Reference
+	//	@Reference
 	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
 	
 //	@Reference
@@ -62,5 +63,14 @@ public class Cliente {
 	public void setPagamentos(Set<Pagamento> pagamentos) {
 		this.pagamentos = pagamentos;
 	}
+	
+	public Integer getIdade() {
+		return idade;
+	}
+
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
+
 
 }

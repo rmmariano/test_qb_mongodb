@@ -15,11 +15,14 @@ public class Main {
 		MongoDBDatastoreProvider db = new MongoDBDatastoreProvider();		
 		Datastore ds = db.getDatastore();
 		
-		Cliente cliente = new Cliente(); cliente.setId(0); cliente.setNome("Maril");		
+		Cliente cliente = new Cliente(); 
+		cliente.setId(0); cliente.setIdade(20); cliente.setNome("Maril");		
 		
-		Cliente cliente02 = new Cliente(); cliente02.setId(1); cliente02.setNome("Abys");
+		Cliente cliente02 = new Cliente(); 
+		cliente02.setId(1); cliente02.setIdade(35); cliente02.setNome("Abys");
 		
-		Cliente cliente03 = new Cliente(); cliente03.setId(2); cliente03.setNome("Maril");	
+		Cliente cliente03 = new Cliente(); 
+		cliente03.setId(2); cliente03.setIdade(22); cliente03.setNome("Maril");	
 		
 		Cachorro cachorro = new Cachorro();
 		cachorro.setId(0); cachorro.setNome("Hau"); cachorro.setRaca("pastor");
@@ -41,6 +44,7 @@ public class Main {
 		for(Cliente c: lista_clientes){
 			System.out.println("Id: " + c.getId());
 			System.out.println("Nome: " + c.getNome());
+			System.out.println("Idade: " + c.getIdade());
 			
 			System.out.println("Cachorros: ");			
 			Set<Cachorro> set_cachorros = c.getCachorros();				
@@ -71,6 +75,7 @@ public class Main {
 		for(Cliente c: lista_de_clientes){
 			System.out.println("Id: " + c.getId());
 			System.out.println("Nome: " + c.getNome());
+			System.out.println("Idade: " + c.getIdade());
 			
 			System.out.println("Cachorros: ");			
 			Set<Cachorro> set_cachorros = c.getCachorros();				
@@ -97,6 +102,7 @@ public class Main {
 		for(Cliente c: lista_de_clientes){
 			System.out.println("Id: " + c.getId());
 			System.out.println("Nome: " + c.getNome());
+			System.out.println("Idade: " + c.getIdade());
 			
 			System.out.println("Cachorros: ");			
 			Set<Cachorro> set_cachorros = c.getCachorros();				
@@ -115,6 +121,34 @@ public class Main {
 			
 			System.out.println("\n");			
 		}
+		
+		
+		System.out.println("Consultar pela idade (> 20): ");
+		lista_de_clientes = dao.getClienteByIdade(20);
+		
+		for(Cliente c: lista_de_clientes){
+			System.out.println("Id: " + c.getId());
+			System.out.println("Nome: " + c.getNome());
+			System.out.println("Idade: " + c.getIdade());
+			
+			System.out.println("Cachorros: ");			
+			Set<Cachorro> set_cachorros = c.getCachorros();				
+			for(Cachorro dog: set_cachorros){
+				System.out.println(" Nome: " + dog.getNome());				
+				System.out.println(" Raca: " + dog.getRaca());
+			}
+			
+			System.out.println("Pagamentos: ");			
+			Set<Pagamento> set_pags = c.getPagamentos();			
+			for(Pagamento pag: set_pags){
+				System.out.println(" ID: " + pag.getId());				
+				System.out.println(" Valor: " + pag.getValor());
+				System.out.println(" Data: " + pag.getData());
+			}
+			
+			System.out.println("\n");			
+		}
+		
 		
 	}
 
