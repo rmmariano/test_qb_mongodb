@@ -16,8 +16,11 @@ public class Cliente {
 	private int id;
 	private String nome;
 	
-	@Reference
+//	@Reference
 	private Set<Cachorro> cachorros = new HashSet<Cachorro>();
+	
+	
+	
 //	@Reference
 //	public Set<Pagamento> pagamentos = new HashSet<Pagamento>();
 	
