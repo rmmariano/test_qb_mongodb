@@ -24,7 +24,7 @@ public class MongoDBDatastoreProvider extends DatastoreProvider{
 		// Obs.: as classes aqui listadas precisam ter pelo menos um construtor vazio		
 		getMorphia().map(Cliente.class);
 		getMorphia().map(Cachorro.class);
-//		getMorphia().map(Pagamento.class);
+		getMorphia().map(Pagamento.class);
 	}
 
 	@Override
